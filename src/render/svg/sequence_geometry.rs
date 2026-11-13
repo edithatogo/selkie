@@ -642,7 +642,9 @@ fn path_points(path: &str) -> Vec<(f64, f64)> {
         .filter_map(|part| part.parse::<f64>().ok())
         .collect();
 
-    nums.as_chunks::<2>().0.iter()
+    nums.as_chunks::<2>()
+        .0
+        .iter()
         .map(|chunk| (chunk[0], chunk[1]))
         .collect()
 }
