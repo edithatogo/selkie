@@ -73,9 +73,7 @@ pub fn render_quadrant_ascii(db: &QuadrantDb) -> Result<String> {
     for row in &mut grid {
         row[mid_x] = '│';
     }
-    for cell in &mut grid[mid_y] {
-        *cell = '─';
-    }
+    grid[mid_y].fill('─');
     grid[mid_y][mid_x] = '┼';
 
     // Place quadrant labels

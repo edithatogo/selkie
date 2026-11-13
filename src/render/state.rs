@@ -212,7 +212,7 @@ fn compute_level_layout(
             let width_offset = (expanded_width - original_width) / 2.0;
 
             // Shift all positions to center content within expanded width
-            for (_, (x, _, _, _)) in inner_layout.positions.iter_mut() {
+            for (x, _, _, _) in inner_layout.positions.values_mut() {
                 *x += width_offset;
             }
             // Shift edge points and label positions
@@ -455,7 +455,7 @@ fn compute_level_layout(
     }
 
     // Normalize positions to start from (0, 0)
-    for (_, (x, y, _, _)) in positions.iter_mut() {
+    for (x, y, _, _) in positions.values_mut() {
         *x -= min_x;
         *y -= min_y;
     }
