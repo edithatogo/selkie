@@ -1,0 +1,12 @@
+# Citation File Format: https://citation-file-format.github.io/
+cff-version: 1.2.0
+message: If you use this software, please cite it using this metadata and record the commit
+  or release used.
+title: Selkie
+authors:
+- name: selkie project
+  website: https://github.com/btucker/selkie
+repository-code: https://github.com/edithatogo/selkie
+url: https://github.com/edithatogo/selkie
+abstract: This repository is a fork of btucker/selkie. The upstream project retains its authorship
+  and attribution. Cite the exact repository revision used.
